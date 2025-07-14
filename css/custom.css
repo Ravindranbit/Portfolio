@@ -817,14 +817,6 @@ a
 {
     background-color: #0EAACE;
 }
-.google-plus
-{
-    background-color: #3acab1;
-}
-.google-plus:hover
-{
-    background-color: #DD4C39;
-}
 .instagram
 {
     background-color: #3acab1;
@@ -832,22 +824,6 @@ a
 .instagram:hover
 {
     background-color: #4A789E;
-}
-.pinterest
-{
-    background-color: #3acab1;
-}
-.pinterest:hover
-{
-    background-color: #CB2027;
-}
-.skype
-{
-    background-color: #3acab1;
-}
-.skype:hover
-{
-    background-color: #01AEF2;
 }
 form
 {
@@ -861,28 +837,6 @@ form
     background-color: rgba(26, 26, 26, 1);
     padding: 20px 0px;
 }
-.logo h1
-{
-    color: #F2F2F2;
-    font-family: 'Raleway', sans-serif;
-    font-size: 50px;
-}
-.copyright
-{
-    margin-top: 10px; 
-    font-size: 16px;
-    color: #f3f3f3;
-}
-.copyright a:hover
-{
-    text-decoration: none;
-   /*  color: #137513; */
-   color: darkcyan;
-}
-.copyright a
-{
-    color: #FFFFFF;
-}
 .theme
 {
     font-family: "Coda";
@@ -890,6 +844,7 @@ form
     /* font-weight: bold; */
     /* padding-left: 5px; */
 }
+
 /* ================================================================================================================
                         Media Query
 ================================================================================================================== */
