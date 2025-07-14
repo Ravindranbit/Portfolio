@@ -28,6 +28,207 @@
 			background-color: #f2dede;
 			border-color: #ebccd1;
 		}
+
+		/* Enhanced Responsive Styles */
+		
+		/* Mobile First Approach */
+		.skills-grid {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 20px !important;
+			max-width: 100% !important;
+			margin: auto !important;
+			text-align: center !important;
+			padding: 0 15px !important;
+		}
+
+		/* Tablet */
+		@media (min-width: 768px) {
+			.skills-grid {
+				grid-template-columns: repeat(3, 1fr) !important;
+				gap: 30px !important;
+				max-width: 700px !important;
+			}
+		}
+
+		/* Desktop */
+		@media (min-width: 992px) {
+			.skills-grid {
+				grid-template-columns: repeat(4, 1fr) !important;
+				gap: 40px !important;
+				max-width: 900px !important;
+			}
+		}
+
+		/* Large Desktop */
+		@media (min-width: 1200px) {
+			.skills-grid {
+				gap: 50px !important;
+				max-width: 1000px !important;
+			}
+		}
+
+		/* Mobile Typography */
+		@media (max-width: 767px) {
+			.starting-text h1 {
+				font-size: 2.5rem !important;
+				margin-bottom: 15px !important;
+			}
+			
+			.starting-text h2 {
+				font-size: 18px !important;
+				line-height: 1.4 !important;
+				padding: 0 15px !important;
+			}
+
+			#heading h3 {
+				font-size: 24px !important;
+			}
+
+			.post-excerpt h2 {
+				font-size: 20px !important;
+			}
+
+			.skill h4 {
+				font-size: 14px !important;
+			}
+
+			.skill i {
+				font-size: 45px !important;
+			}
+		}
+
+		/* Project Cards Responsive */
+		@media (max-width: 991px) {
+			.post .col-md-5,
+			.post .col-md-7 {
+				margin-bottom: 30px;
+			}
+			
+			.post .col-md-5 {
+				text-align: center;
+			}
+			
+			.post-excerpt {
+				text-align: center;
+			}
+		}
+
+		/* Education Section Responsive */
+		@media (max-width: 767px) {
+			.row .col-md-6[style*="border-right"] {
+				border-right: none !important;
+				border-bottom: 2px solid #ddd !important;
+				padding-right: 15px !important;
+				padding-bottom: 30px !important;
+				margin-bottom: 30px !important;
+			}
+			
+			.row .col-md-6[style*="padding-left"] {
+				padding-left: 15px !important;
+			}
+		}
+
+		/* Contact Form Responsive */
+		@media (max-width: 767px) {
+			.col-md-6.col-md-offset-3 {
+				padding: 0 15px !important;
+			}
+			
+			.input-group {
+				margin-bottom: 15px !important;
+			}
+		}
+
+		/* Navigation Responsive */
+		@media (max-width: 767px) {
+			.navbar-nav {
+				text-align: center !important;
+			}
+			
+			.navbar-nav li {
+				display: block !important;
+				margin: 5px 0 !important;
+			}
+		}
+
+		/* Research Section Responsive */
+		@media (max-width: 767px) {
+			.service {
+				margin-bottom: 40px !important;
+			}
+			
+			.service-icon i {
+				font-size: 3rem !important;
+			}
+			
+			.about-service h3 {
+				font-size: 18px !important;
+				margin: 15px 0 !important;
+			}
+			
+			.about-service p {
+				font-size: 14px !important;
+				line-height: 1.5 !important;
+			}
+		}
+
+		/* General Container Responsive */
+		@media (max-width: 767px) {
+			section {
+				padding: 40px 0 !important;
+			}
+			
+			.container {
+				padding: 0 15px !important;
+			}
+			
+			.row {
+				margin: 0 !important;
+			}
+		}
+
+		/* Button Responsive */
+		@media (max-width: 767px) {
+			.hero-buttons button {
+				padding: 8px 16px !important;
+				font-size: 14px !important;
+			}
+			
+			.btn.send {
+				width: 100% !important;
+				margin-top: 10px !important;
+			}
+		}
+
+		/* Image Responsive */
+		@media (max-width: 767px) {
+			.frame img {
+				height: 200px !important;
+				object-fit: cover !important;
+			}
+		}
+
+		/* Utility Classes */
+		.text-responsive {
+			font-size: clamp(14px, 2.5vw, 16px);
+			line-height: 1.6;
+		}
+
+		.margin-responsive {
+			margin: clamp(10px, 3vw, 30px) 0;
+		}
+
+		/* Fix overflow issues */
+		body, html {
+			overflow-x: hidden !important;
+		}
+
+		.container-fluid,
+		.container {
+			max-width: 100% !important;
+			overflow-x: hidden !important;
+		}
 	</style>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -52,6 +253,7 @@
 								<ul class="nav navbar-nav navbar-right">
 									<li><a href="#about">About</a></li>
 									<li><a href="#Resume">Profile</a></li>
+									<li><a href="#skills">Skills</a></li>
 									<li><a href="#blog">Project</a></li>
 									<li><a href="#contact">Contact</a></li>
 								</ul>
@@ -120,7 +322,7 @@
 					</div>
 				</div>
 				<div class="row wow fadeInUp" data-wow-delay="0.3s">
-					<div class="col-md-6" style="border-right: 2px solid #ddd; padding-right: 30px;">
+					<div class="col-md-6 col-sm-12" style="border-right: 2px solid #ddd; padding-right: 30px;">
 						<h3 style="text-align: left;">Education</h3>
 						<div class="education-section" style="margin-top: 30px; text-align: left;">
 							<h4 style="color: #333; margin-bottom: 10px; text-align: left;">B.Tech in Computer Science and Engineering</h4> 
@@ -129,7 +331,7 @@
 							<p style="line-height: 1.6; text-align: left;">pursuing B.Tech in Computer Science and Engineering at Amrita School of Computing. Exploring full-stack development, cloud computing, and real-world tech applications. Actively involved in hackathons and hands-on projects. College life has been a journey of continuous learning and innovation.</p>
 						</div>
 					</div>
-					<div class="col-md-6" style="padding-left: 30px;">
+					<div class="col-md-6 col-sm-12" style="padding-left: 30px;">
 						<div class="education-section" style="margin-top: 30px; text-align: left;">
 							<h4 style="color: #333; margin-bottom: 10px; text-align: left;">HSE (12th) and SSLC (10th)</h4> 
 							<p style="margin-bottom: 5px; color: #666; text-align: left;">2020 - 2023</p>
@@ -151,75 +353,75 @@
 						<br/>
 					</div>
 				</div>
-				<div class="skills-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 900px; margin: auto; text-align: center;">
+				<div class="skills-grid">
 					<!-- Row 1 -->
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-html5-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">HTML5</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-css3-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">CSS3</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-javascript-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">JavaScript</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-react-original colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">React.js</h4>
 					</div>
 
 					<!-- Row 2 -->
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-nodejs-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Node.js</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-express-original" style="font-size: 60px; color: #000000;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Express.js</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-mongodb-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MongoDB</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-mysql-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MySQL</h4>
 					</div>
 
 					<!-- Row 3 -->
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-python-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Python</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-java-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Java</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-cplusplus-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">C++</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="fas fa-database" style="font-size: 60px; color: #00758f;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">DBMS</h4>
 					</div>
 
 					<!-- Row 4 -->
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="devicon-git-plain colored" style="font-size: 60px;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Git</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="fas fa-file-powerpoint" style="font-size: 60px; color: #d24726;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MS PowerPoint</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="fas fa-file-word" style="font-size: 60px; color: #2b579a;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MS Word</h4>
 					</div>
-					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px;">
 						<i class="fas fa-file-excel" style="font-size: 60px; color: #217346;"></i>
 						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MS Excel</h4>
 					</div>
@@ -242,13 +444,13 @@
 
 		    	<div class="row post">
 		    		<div class="main_content">
-		    			<div class="col-md-5">
+		    			<div class="col-md-5 col-sm-12">
 		    				<div class="frame">
 		    					<a href="#"><img class="img-responsive" src="img/Fitness.png" alt="Real Estate Platform" style="width: 100%; height: 280px; object-fit: cover; background-color: #f8f8f8; border: none; margin-top: 40px;"/></a>
 		    				</div>
 		    				<img class="hidden-xs post-shadow" src="img/post-shadow.png" alt=""/>
 		    			</div>
-		    			<div class="post-excerpt col-md-7">
+		    			<div class="post-excerpt col-md-7 col-sm-12">
 		    				<h2 class="title">
 		    					<a href="#">Fitclub</a>
 		    				</h2>
@@ -287,13 +489,13 @@
 		    	</div>
 		    	<div class="row post">
 		    		<div class="main_content">
-		    			<div class="col-md-5">
+		    			<div class="col-md-5 col-sm-12">
 		    				<div class="frame">
 		    					<a href="#"><img class="img-responsive" src="img/connect.jpg" alt="Connect Application" style="width: 100%; height: 280px; object-fit: cover; background-color: #f8f8f8; border: none; margin-top: 40px;"/></a>
 		    				</div>
 		    				<img class="hidden-xs post-shadow" src="img/post-shadow.png" alt=""/>
 		    			</div>
-		    			<div class="post-excerpt col-md-7">
+		    			<div class="post-excerpt col-md-7 col-sm-12">
 		    				<h2 class="title">
 		    					<a href="#">Connect</a>
 		    				</h2>
@@ -336,13 +538,13 @@
 		    	</div>
 		    	<div class="row post">
 		    		<div class="main_content">
-		    			<div class="col-md-5">
+		    			<div class="col-md-5 col-sm-12">
 		    				<div class="frame">
 		    					<a href="#"><img class="img-responsive" src="img/Pondy.png" alt="Real Estate Platform" style="width: 100%; height: 350px; object-fit: contain; background-color: #f8f8f8; border: none; margin-top: 40px;"/></a>
 		    				</div>
 		    				<img class="hidden-xs post-shadow" src="img/post-shadow.png" alt=""/>
 		    			</div>
-		    			<div class="post-excerpt col-md-7">
+		    			<div class="post-excerpt col-md-7 col-sm-12">
 		    				<h2 class="title">
 		    					<a href="#">Pondy</a>
 		    				</h2>
@@ -400,7 +602,7 @@
 					<div class="main_content">
 						<div class="services">
 							<div class="row wow fadeInUp" data-wow-delay="0.3s">
-								<div class="col-sm-4 service">
+								<div class="col-sm-4 col-xs-12 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-cloud fa-5x"></i>
 									</div>
@@ -412,7 +614,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-4 service">
+								<div class="col-sm-4 col-xs-12 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-search fa-5x"></i>
 									</div>
@@ -424,7 +626,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-4 service">
+								<div class="col-sm-4 col-xs-12 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-code fa-5x"></i>
 									</div>
@@ -438,7 +640,7 @@
 								</div>
 							</div>
 							<div class="row wow fadeInUp" data-wow-delay="0.5s">
-								<div class="col-sm-4 service">
+								<div class="col-sm-4 col-xs-12 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-car fa-5x"></i>
 									</div>
@@ -450,7 +652,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-4 service">
+								<div class="col-sm-4 col-xs-12 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-chain fa-5x"></i>
 									</div>
@@ -462,7 +664,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-sm-4 service">
+								<div class="col-sm-4 col-xs-12 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-cogs fa-5x"></i>
 									</div>
@@ -493,7 +695,7 @@
 					</div>
 				</div>
 				<div class="row text-center main_content wow fadeInUp" data-wow-delay="0.3s" style="margin-top: 5px; padding-top: 0px;">
-					<div class="col-md-6 col-md-offset-3 text-center">
+					<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
 						<form id="contact-form" method="post">
 							<div class="form">
 								<div class="input-group margin-bottom-sm">
