@@ -7,8 +7,28 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/ionicons.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.alert {
+			padding: 15px;
+			margin-bottom: 20px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+		}
+		.alert-success {
+			color: #3c763d;
+			background-color: #dff0d8;
+			border-color: #d6e9c6;
+		}
+		.alert-danger {
+			color: #a94442;
+			background-color: #f2dede;
+			border-color: #ebccd1;
+		}
+	</style>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
@@ -66,7 +86,7 @@
 		</div>
 	</div>
 			
-		<section id="about" style="padding-top: 120px;">
+		<section id="about" style="padding-top: 120px;" class="wow fadeInUp">
 			<div class="container">
 				<div class="row text-center" id="heading">
 					<div class="col-md-6 col-md-offset-3 wow animated zoomInDown" id="heading-text">
@@ -76,7 +96,7 @@
 						<br/>
 					</div>
 				</div>
-				<div class="row about-us-text">
+				<div class="row about-us-text wow fadeInUp" data-wow-delay="0.3s">
 					<div class="col-md-8 col-md-offset-2">
 						<p class="text-center">I'm a Computer Science student with a passion for turning ideas into real, 
 							working products. I'm currently hands-on with full-stack development, mainly using React.js, Node.js, Express, and MongoDB.
@@ -89,17 +109,17 @@
 			</div>
 		</section>
 
-		<section id="Resume" style="padding-top: 40px;">
+		<section id="Resume" style="padding-top: 40px;" class="wow fadeInUp">
 			<div class="container">
 				<div class="row text-center" id="heading">
 					<div class="col-md-12 wow animated zoomInDown" id="heading-text">
-						<h3> Resume</h3>
+						<h3> Profile</h3>
 						<p>My Journey So Far</p>
 						<hr class="full">
 						<br/>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row wow fadeInUp" data-wow-delay="0.3s">
 					<div class="col-md-6" style="border-right: 2px solid #ddd; padding-right: 30px;">
 						<h3 style="text-align: left;">Education</h3>
 						<div class="education-section" style="margin-top: 30px; text-align: left;">
@@ -121,6 +141,92 @@
 			</div>
 		</section>
 
+		<section id="skills" style="padding-top: 60px; padding-bottom: 60px;">
+			<div class="container">
+				<div class="row text-center" id="heading">
+					<div class="col-md-6 col-md-offset-3 wow animated zoomInDown" id="heading-text">
+						<h3>Skills</h3>
+						<p>Technologies & Tools</p>
+						<hr class="full">
+						<br/>
+					</div>
+				</div>
+				<div class="skills-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 900px; margin: auto; text-align: center;">
+					<!-- Row 1 -->
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-html5-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">HTML5</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-css3-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">CSS3</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-javascript-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">JavaScript</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-react-original colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">React.js</h4>
+					</div>
+
+					<!-- Row 2 -->
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-nodejs-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Node.js</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-express-original" style="font-size: 60px; color: #000000;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Express.js</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-mongodb-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MongoDB</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-mysql-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MySQL</h4>
+					</div>
+
+					<!-- Row 3 -->
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-python-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Python</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-java-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Java</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-cplusplus-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">C++</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="fas fa-database" style="font-size: 60px; color: #00758f;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">DBMS</h4>
+					</div>
+
+					<!-- Row 4 -->
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="devicon-git-plain colored" style="font-size: 60px;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">Git</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="fas fa-file-powerpoint" style="font-size: 60px; color: #d24726;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MS PowerPoint</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="fas fa-file-word" style="font-size: 60px; color: #2b579a;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MS Word</h4>
+					</div>
+					<div class="skill" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 40px;">
+						<i class="fas fa-file-excel" style="font-size: 60px; color: #217346;"></i>
+						<h4 style="margin: 0; font-size: 16px; font-weight: 600; color: #333;">MS Excel</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section id="blog">
 			<div class="container">
 				<div class="row text-center" id="heading">
@@ -133,56 +239,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row post">
-					<div class="main_content">
-						<div class="col-md-5">
-							<div class="frame">
-								<a href="#"><img class="img-responsive" src="img/Pondy.png" alt="Real Estate Platform" style="width: 100%; height: 350px; object-fit: contain; background-color: #f8f8f8; border: none; margin-top: 40px;"/></a>
-							</div>
-							<img class="hidden-xs post-shadow" src="img/post-shadow.png" alt=""/>
-						</div>
-		    			<div class="post-excerpt col-md-7">
-		    				<h2 class="title">
-		    					<a href="#">Pondy</a>
-		    				</h2>
-		    				<div class="line-dotted">
-		    				</div>
-		    				<p>
-		    				<span class="short-text">Navigating the modern property market requires a 
-							digital platform that's fast, functional, and user-focused—this real 
-							estate website delivers just that. Tailored for showcasing a wide range 
-							of residential and commercial listings, the site offers users an intuitive 
-							experience to explore properties based on location, price, and features...</span>
-		    				<span class="full-text" style="display: none;">Navigating the modern 
-							property market requires a digital platform that's fast, functional, and 
-							user-focused—this real estate website delivers just that. Tailored for 
-							showcasing a wide range of residential and commercial listings, the site 
-							offers users an intuitive experience to explore properties based on location, 
-							price, and features. A dedicated admin dashboard empowers site managers to 
-							add, update, or remove listings effortlessly, keeping content fresh and 
-							relevant. Map integration enhances location discovery, while listing cards 
-							present high-quality visuals and key property details at a glance.The backend 
-							is built using Supabase, offering a robust and scalable infrastructure with real-
-							time database updates, user authentication, and secure file storage—all without 
-							the need to manage traditional server environments. On the frontend, responsive 
-							design ensures accessibility across devices, from desktops to smartphones.
-							Additional features include property filtering, a contact form for direct 
-							inquiries, and a clean, modern layout designed to keep users engaged. This 
-							project is ideal for real estate businesses aiming to strengthen their online 
-							presence with a tech-forward, easy-to-manage web solution.</span>
-		    					<a href="#" class="read-more-btn">...Read more</a>
-		    					<a href="#" class="read-less-btn" style="display: none;">...Read less</a>
-		    				</p> 
-		    				<div class="line-dotted"></div>
-		    				<p class="meta"><strong>Features: </strong>Admin Dashboard, Map Integration, Property Filtering, Real-time Updates
-		    				</p>
-		    				<div class="line-dotted"></div>
-		    				<p class="meta"><strong>Tech Stack: </strong>Supabase, React.js, TypeScript, JavaScript
-		    				</p>
-		    				<div class="line-dotted"></div>
-		    			</div>
-		    		</div>
-		    	</div>
+
 		    	<div class="row post">
 		    		<div class="main_content">
 		    			<div class="col-md-5">
@@ -277,11 +334,61 @@
 		    			</div>
 		    		</div>
 		    	</div>
+		    	<div class="row post">
+		    		<div class="main_content">
+		    			<div class="col-md-5">
+		    				<div class="frame">
+		    					<a href="#"><img class="img-responsive" src="img/Pondy.png" alt="Real Estate Platform" style="width: 100%; height: 350px; object-fit: contain; background-color: #f8f8f8; border: none; margin-top: 40px;"/></a>
+		    				</div>
+		    				<img class="hidden-xs post-shadow" src="img/post-shadow.png" alt=""/>
+		    			</div>
+		    			<div class="post-excerpt col-md-7">
+		    				<h2 class="title">
+		    					<a href="#">Pondy</a>
+		    				</h2>
+		    				<div class="line-dotted">
+		    				</div>
+		    				<p>
+		    					<span class="short-text">Navigating the modern property market requires a 
+								digital platform that's fast, functional, and user-focused—this real 
+								estate website delivers just that. Tailored for showcasing a wide range 
+								of residential and commercial listings, the site offers users an intuitive 
+								experience to explore properties based on location, price, and features...</span>
+		    					<span class="full-text" style="display: none;">Navigating the modern 
+								property market requires a digital platform that's fast, functional, and 
+								user-focused—this real estate website delivers just that. Tailored for 
+								showcasing a wide range of residential and commercial listings, the site 
+								offers users an intuitive experience to explore properties based on location, 
+								price, and features. A dedicated admin dashboard empowers site managers to 
+								add, update, or remove listings effortlessly, keeping content fresh and 
+								relevant. Map integration enhances location discovery, while listing cards 
+								present high-quality visuals and key property details at a glance.The backend 
+								is built using Supabase, offering a robust and scalable infrastructure with real-
+								time database updates, user authentication, and secure file storage—all without 
+								the need to manage traditional server environments. On the frontend, responsive 
+								design ensures accessibility across devices, from desktops to smartphones.
+								Additional features include property filtering, a contact form for direct 
+								inquiries, and a clean, modern layout designed to keep users engaged. This 
+								project is ideal for real estate businesses aiming to strengthen their online 
+								presence with a tech-forward, easy-to-manage web solution.</span>
+		    					<a href="#" class="read-more-btn">...Read more</a>
+		    					<a href="#" class="read-less-btn" style="display: none;">...Read less</a>
+		    				</p> 
+		    				<div class="line-dotted"></div>
+		    				<p class="meta"><strong>Features: </strong>Admin Dashboard, Map Integration, Property Filtering, Real-time Updates
+		    				</p>
+		    				<div class="line-dotted"></div>
+		    				<p class="meta"><strong>Tech Stack: </strong>Supabase, React.js, TypeScript, JavaScript
+		    				</p>
+		    				<div class="line-dotted"></div>
+		    			</div>
+		    		</div>
+		    	</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="our_service">
+		<section id="our_service" class="wow fadeInUp">
 			<div class="container">
 				<div class="row text-center" id="heading">
 					<div class="col-md-6 col-md-offset-3 wow animated zoomInDown" id="heading-text">
@@ -292,7 +399,7 @@
 					</div>
 					<div class="main_content">
 						<div class="services">
-							<div class="row">
+							<div class="row wow fadeInUp" data-wow-delay="0.3s">
 								<div class="col-sm-4 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-cloud fa-5x"></i>
@@ -330,7 +437,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="row">
+							<div class="row wow fadeInUp" data-wow-delay="0.5s">
 								<div class="col-sm-4 service">
 									<div class="service-icon text-center">
 										<i class="fa fa-car fa-5x"></i>
@@ -374,7 +481,7 @@
 			</div>
 		</section>
 
-		<section id="contact">
+		<section id="contact" class="wow fadeInUp">
 			<div class="container">
 				<div class="row text-center" id="heading">
 					<div class="bg-image">
@@ -385,36 +492,37 @@
 						</div>
 					</div>
 				</div>
-				<div class="row text-center main_content" style="margin-top: 5px; padding-top: 0px;">
+				<div class="row text-center main_content wow fadeInUp" data-wow-delay="0.3s" style="margin-top: 5px; padding-top: 0px;">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<form method="post" action="#">
+						<form id="contact-form" method="post">
 							<div class="form">
 								<div class="input-group margin-bottom-sm">
 									<span class="input-group-addon">
 										<i class="fa fa-user fa-fw"></i>
 									</span>
-									<input class="form-control" type="text" placeholder="Name" required>
+									<input class="form-control" type="text" name="name" placeholder="Name" required>
 								</div>
 								<div class="input-group margin-bottom-sm">
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o fa-fw"></i>
 									</span>
-									<input class="form-control" type="text" placeholder="Email address" required>
+									<input class="form-control" type="email" name="email" placeholder="Email address" required>
 								</div>
 								<div class="input-group margin-bottom-sm">
 									<span class="input-group-addon">
 										<i class="fa fa-tags fa-fw"></i>
 									</span>
-									<input class="form-control" type="text" placeholder="Subject">
+									<input class="form-control" type="text" name="subject" placeholder="Subject">
 								</div>
 							</div>
 							<div class="input-group margin-bottom-sm">
 								<span class="input-group-addon">
 									<i class="fa fa-comment-o fa-fw"></i>
 								</span>
-								<textarea class="form-control" rows="6" type="text" placeholder="Your Message" required></textarea>
+								<textarea class="form-control" rows="6" name="message" placeholder="Your Message" required></textarea>
 							</div>
-							<input class="btn btn-primary send" type="submit" value="Send Message">
+							<button class="btn btn-primary send" type="submit" id="submit-btn">Send Message</button>
+							<div id="form-status" style="margin-top: 15px; display: none;"></div>
 						</form>
 					</div>
 				</div>
@@ -437,6 +545,56 @@
 				$(this).siblings('.short-text').show();
 				$(this).hide();
 				$(this).siblings('.read-more-btn').show();
+			});
+
+			// Contact form submission
+			$('#contact-form').on('submit', async function(e) {
+				e.preventDefault();
+				
+				const submitBtn = $('#submit-btn');
+				const formStatus = $('#form-status');
+				const originalText = submitBtn.text();
+				
+				// Show loading state
+				submitBtn.text('Sending...').prop('disabled', true);
+				formStatus.hide();
+				
+				// Get form data
+				const formData = {
+					name: $('input[name="name"]').val(),
+					email: $('input[name="email"]').val(),
+					subject: $('input[name="subject"]').val(),
+					message: $('textarea[name="message"]').val()
+				};
+				
+				try {
+					const response = await fetch('/api/contact', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(formData)
+					});
+					
+					const result = await response.json();
+					
+					if (response.ok) {
+						formStatus.html('<div class="alert alert-success">Message sent successfully! I\'ll get back to you soon.</div>')
+							.show();
+						// Reset form
+						$('#contact-form')[0].reset();
+					} else {
+						formStatus.html('<div class="alert alert-danger">Failed to send message. Please try again.</div>')
+							.show();
+					}
+				} catch (error) {
+					console.error('Error:', error);
+					formStatus.html('<div class="alert alert-danger">Network error. Please check your connection and try again.</div>')
+						.show();
+				} finally {
+					// Reset button
+					submitBtn.text(originalText).prop('disabled', false);
+				}
 			});
 		});
 	</script>
